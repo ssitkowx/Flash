@@ -10,11 +10,17 @@
 /////////////////////////// CLASSES/STRUCTURES ////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
+template <class DERIVED_TYPE>
 class Flash
 {
+    friend DERIVED_TYPE;
+    DERIVED_TYPE & derivedType = static_cast <DERIVED_TYPE &> (*this);
+
     public:
-        Flash          () = default;
-        virtual ~Flash () = default;
+        Flash () = default;
+		
+    private:
+	    ~Flash () = default;
 };
 
 ///////////////////////////////////////////////////////////////////////////////
