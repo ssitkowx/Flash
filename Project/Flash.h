@@ -14,16 +14,17 @@ template <class DERIVED_TYPE>
 class Flash
 {
     friend DERIVED_TYPE;
-    DERIVED_TYPE & derivedType = static_cast <DERIVED_TYPE &> (*this);
+    DERIVED_TYPE & derivedType = static_cast <DERIVED_TYPE &>(*this);
 
     public:
         Flash () = default;
-		
-    private:
-	    ~Flash () = default;
+        ~Flash () = default;
+
+        void Erase (const uint32_t vAddress, const uint16_t vLen)                              { derivedType.Erase (vAddress, vLen);        }
+        void Read  (const uint32_t vAddress, uint8_t * const vData, const uint16_t vLen)       { derivedType.Read  (vAddress, vData, vLen); }
+        void Write (const uint32_t vAddress, const uint8_t * const vData, const uint16_t vLen) { derivedType.Write (vAddress, vData, vLen); }
 };
 
 ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////// END OF FILE ///////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-

@@ -1,0 +1,9 @@
+{
+    "version": 4,
+    "vendor": {
+        "conan": {}
+    },
+    "include": [
+        "/media/sylwester/b0f222cb-8386-4622-9d17-261cbd145f18/Home/Projekty/Git/Flash/Build/Debug/generators/CMakePresets.json"
+    ]
+}
