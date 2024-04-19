@@ -37,6 +37,7 @@
 /trunk/conan/conanbuildinfo.txt
 /build
 /Build
+/CMakeUserPresets.json
 Conan/conan.lock
 Conan/conanbuildinfo.cmake
 Conan/conanbuildinfo.txt
